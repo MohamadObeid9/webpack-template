@@ -22,6 +22,21 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(?:js|mjs|cjs)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            targets: "defaults",
+            presets: [["@babel/preset-env"]],
+            plugins: [
+              "@babel/plugin-proposal-decorators",
+              { version: "2023-11" },
+            ],
+          },
+        },
+      },
+      {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/,
@@ -42,5 +57,8 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
+  },
+  stats: {
+    loggingDebug: ["babel-loader"],
   },
 };

@@ -1,5 +1,5 @@
 {
-  "name": "tsdev",
+  "name": "webpack-template",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -18,6 +18,7 @@
     "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
     "eslint": "^9.17.0",
+    "gh-pages": "^6.3.0",
     "globals": "^15.14.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",

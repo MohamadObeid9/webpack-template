@@ -1,7 +1,7 @@
 const createPara = () => {
   const para = document.createElement("p");
   para.textContent = "Hello odin";
-  para.style.cssText = "font-weight:bold;font-size:40px";
+  para.classList.add("text-red-500", "font-bold", "text-4xl","dark:text-amber-400");
   document.body.appendChild(para);
 };
 export default createPara;
